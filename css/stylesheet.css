@@ -473,11 +473,12 @@ i.md-icon {
     border: 2px solid transparent;
     transition: all .2s ease-in-out;
 }
-a:hover .community_card{
+a:hover .community_card, a.active .community_card{
     transform: scale(1.1);
     border-color: var(--orange-color);
 }
 a:hover .community_card .community_card-img, a.active .community_card .community_card-img {
+    border: 2px solid var(--orange-color);
 }
 
 
@@ -772,5 +773,9 @@ a:hover .community_card .community_card-img, a.active .community_card .community
     }
     .community_card-title p {
         font-size: 16px;
+    }
+    .nav-community {
+        overflow-x: auto;
+        flex-wrap: nowrap;
     }
 }
