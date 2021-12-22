@@ -780,7 +780,7 @@ a:hover .community_card .community_card-img, a.active .community_card .community
 }
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1350px) {
     .bg-dotted {
        background-position-x: left;
     }
