@@ -623,7 +623,6 @@ a:hover .community_card .community_card-img, a.active .community_card .community
         background-image: url('../img/bg.svg');
         background-repeat: repeat-y;
         background-size: 3%;
-        background-attachment: fixed;
         background-position: 4rem 0;
     }
     .indentation-left {
@@ -777,5 +776,12 @@ a:hover .community_card .community_card-img, a.active .community_card .community
     .nav-community {
         overflow-x: auto;
         flex-wrap: nowrap;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .bg-dotted {
+       background-position-x: left;
     }
 }
