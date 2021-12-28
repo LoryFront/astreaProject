@@ -48,3 +48,11 @@ $("#form-newsletter").submit(function(e){
     }
     return false;
 });
+
+$("#form-prenotazione").submit(function(e){
+    if(e.target.checkValidity()){
+        $('#modalSuccess').modal('show');
+        e.preventDefault();
+    }
+    return false;
+});
