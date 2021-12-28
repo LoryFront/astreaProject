@@ -158,7 +158,7 @@
    loader = new THREE.TextureLoader();
    loader.setCrossOrigin( 'https://s.codepen.io' );
    //var texture = loader.load( TEXTURE_PATH + 'ColorMap.jpg' );
-   var texture = loader.load( '../img/ColorMap.jpg' );
+   var texture = loader.load( '/img/ColorMap.jpg' );
 
    var bump = null;
    bump = loader.load( TEXTURE_PATH + 'Bump.jpg' );
@@ -191,7 +191,7 @@
    loader = new THREE.TextureLoader();
    loader.setCrossOrigin( 'https://s.codepen.io' );
    //var alpha = loader.load( TEXTURE_PATH + "alphaMap.jpg" );
-   var alpha = loader.load( '../img/fair_clouds_4k.jpg' );
+   var alpha = loader.load( '/img/fair_clouds_4k.jpg' );
 
    var materialCloud = new THREE.MeshPhongMaterial({
      alphaMap: alpha,
@@ -269,7 +269,7 @@
      urlPrefix + 'test.jpg',
      urlPrefix + 'test.jpg',
    ];*/
-   var urlPrefix = '../img/';
+   var urlPrefix = '/img/';
    var urls = [
      urlPrefix + 'skybox.jpg',
      urlPrefix + 'skybox.jpg',
