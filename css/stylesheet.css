@@ -796,9 +796,7 @@ a:hover .community_card .community_card-img, a.active .community_card .community
   }
 
   .card-event_description {
-    margin-top: 2rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 2rem 0 0;
   }
 
   .home-astreafest img {
