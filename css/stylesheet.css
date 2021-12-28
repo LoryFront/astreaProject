@@ -365,18 +365,18 @@ i.md-icon {
   z-index: 1;
   position: absolute;
   bottom: -45%;
-  left: -16%;
+  left: -12%;
   width: 55%;
   pointer-events: none;
 }
 
 .card-triangle_right img {
   left: auto;
-  right: -16%;
+  right: -12%;
 }
 
 .card-triangle_description {
-  margin: 0 8rem;
+  margin: 0 7rem;
 }
 
 .card-triangle_right .card-triangle_element {

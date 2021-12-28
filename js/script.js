@@ -44,6 +44,7 @@ function accordionOpen() {
 $("#form-newsletter").submit(function(e){
     if(e.target.checkValidity()){
         $('#modalNewsletter').modal('show');
+        e.preventDefault();
     }
     return false;
 });
