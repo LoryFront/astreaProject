@@ -42,11 +42,16 @@ body {
 /* buttons style */
 
 .button-base {
+  display: inline-block;
   text-transform: uppercase;
   border-radius: 8px;
   background-color: transparent;
   font-size: 14px;
   font-weight: 700;
+}
+
+.button-base:hover {
+  text-decoration: none;
 }
 
 .button-secondary {
