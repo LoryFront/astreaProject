@@ -390,11 +390,13 @@ i.md-icon {
 
 .home-astreafest img {
   width: 100%;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .home-astreafest_description {
-  top: 32%;
   left: 21%;
+  bottom: 0;
 }
 
 
