@@ -41,3 +41,9 @@ function accordionOpen() {
     }
 
 }
+$("#form-newsletter").submit(function(e){
+    if(e.target.checkValidity()){
+        $('#modalSuccess').modal('show');
+    }
+    return false;
+});
