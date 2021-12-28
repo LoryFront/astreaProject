@@ -100,6 +100,7 @@
     </div>
 
     <!--Footer-->
+
     <footer>
         <div class="footer-page position-relative">
             <div class="container px-lg-0">
@@ -110,11 +111,16 @@
                                 <i class="bi bi-chevron-down icon-chev"></i>
                             </span>
                         </p>
-                        <p id="footer-description">Astrea è una città spaziale sormontata da una cupola in cui sono
-                            state create le condizioni di vita più ottimali per gli esseri viventi. Fondata da studenti
-                            e scienziati, Astrea nasce come base per uno dei più grandi studi di ricerca
-                            scientifica e hi-tech. Negli anni, la città è diventata un punto di ritrovo per i più grandi
-                            studiosi, gli appassionati di scienza e tecnologia e i curiosi non intenditori.
+                        <p id="footer-description">Astrea è una città spaziale
+                            sormontata da una cupola in cui sono state create le
+                            condizioni di vita più ottimali per gli esseri
+                            viventi.
+                            Fondata da studenti e scienziati, Astrea nasce come
+                            base per uno dei più grandi studi di ricerca
+                            scientifica e hi-tech.
+                            Negli anni, la città è diventata un punto di ritrovo
+                            per i più grandi studiosi, gli appassionati di
+                            scienza e tecnologia e i curiosi non intenditori.
                         </p>
                     </div>
                     <div class="col-lg-3">
@@ -126,30 +132,29 @@
                     <div class="col-lg-5">
                         <h3 class="text-orange-color">Iscriviti alla newsletter
                         </h3>
-                        <form>
+                        <form id="form-newsletter">
                             <div class="form-group">
                                 <label class="mb-1">EMAIL</label>
                                 <input type="email" class="form-control col-lg-8 col-12"
-                                    placeholder="inserisci l'email">
+                                       placeholder="inserisci l'email">
                                 <div class="footer_btn-subscribe">
-                                    <button class="button-base button-secondary py-2 px-4 mt-3">Iscriviti</button>
+                                    <button class="button-base button-secondary py-2 px-4 mt-3" type="submit">Iscriviti</button>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
-                <div class="row footer_bottom-el mt-4">
-                    <div class="col-lg-4 d-none d-lg-block">
+                <div class="d-lg-flex justify-content-between footer_bottom-el mt-4">
+                    <div class="d-none d-lg-block">
                         <img src="img/logo.svg" alt="logo Astrea" width="40" />
                     </div>
-                    <div class="col-lg-4 text-center my-lg-0 my-4">
+                    <div class="text-center my-lg-0 my-4">
                         <a href="#" class="text-white mr-lg-4 mr-2">@2021</a>
                         <a href="#" class="text-white mx-lg-4 mx-2">Privacy</a>
                         <a href="#" class="text-white ml-lg-4 mx-2">Termini e
                             condizioni</a>
                     </div>
-                    <div class="col-lg-4 d-flex justify-content-end">
+                    <div class="d-flex justify-content-end">
                         <a class="text-orange-color mx-2">
                             <i class="bi bi-play-btn-fill md-icon"></i>
                         </a>
@@ -164,6 +169,26 @@
             </div>
         </div>
     </footer>
+    <!-- modal Newsletter -->
+    <div class="modal fade" id="modalNewsletter" tabindex="-1" aria-labelledby="modalNewsletter" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal_tourism">
+                <div class="modal-header border-0 justify-content-end pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x text-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body pt-0">
+                    <h5 class="modal-title text-center" id="modalNewsletterLabel">
+                        Iscrizione avvenuta con successo</h5>
+                    <p class="text-center">Grazie per esserti registrato alla newsletter! Ora potrai restare aggiornato su tutte le iniziative di Astrea!</p>
+                    <div class="footer_btn-subscribe text-center">
+                        <button class="button-base button-secondary py-2 px-5 mt-3" data-dismiss="modal" aria-label="Close">Continua la navigazione</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--Import script-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
