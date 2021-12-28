@@ -727,6 +727,7 @@ a:hover .community_card .community_card-img, a.active .community_card .community
     position: relative;
     width: 100%;
     left: 0;
+    pointer-events: none;
   }
 
   .home-card-triangle.card-triangle_right {
