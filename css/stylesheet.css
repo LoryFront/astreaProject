@@ -304,7 +304,13 @@ i.md-icon {
 }
 
 .card_origins_observatory_img {
-  width: 100%;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    clip-path: polygon(70% 0, 100% 24%, 100% 100%, 30% 100%, 0 79%, 0% 0%);
+}
+.card_origins_observatory_img.card_right {
+    clip-path: polygon(27% 0, 100% 0, 100% 80%, 74% 100%, 0 100%, 0 20%);
 }
 
 .card_right_origins_observatory_head::before {
@@ -625,9 +631,7 @@ a:hover .community_card .community_card-img, a.active .community_card .community
 }
 
 
-/*
-    Desktop style
-*/
+/* Desktop style */
 
 @media only screen and (min-width: 992px) {
   .bg-dotted {
@@ -637,13 +641,13 @@ a:hover .community_card .community_card-img, a.active .community_card .community
     background-position: 4rem 0;
   }
 
-  .indentation-left {
+  /*.indentation-left {
     padding-left: 9rem;
   }
 
   .indentation-right {
     padding-right: 9rem;
-  }
+  }*/
 
   /**
    * Vertical line
@@ -821,6 +825,10 @@ a:hover .community_card .community_card-img, a.active .community_card .community
     overflow-x: auto;
     flex-wrap: nowrap;
   }
+    .card_origins_observatory_img {
+        object-fit: contain;
+        max-height: 350px;
+    }
 }
 
 
