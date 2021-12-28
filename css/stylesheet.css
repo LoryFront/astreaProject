@@ -6,259 +6,259 @@
 /* Variables section */
 
 :root {
-    --galaxy-color: #463B8A;
-    --orange-color: #FF7D00;
-    --accent-color: #8A7F3B;
-    --dark-galaxy-color: #1A143D;
-    --bg-grey-color: #1D1D1B;
-    --bg-page-color: #0E0C1C;
-    --white-color: #FFFFFF;
-    --black-color: #000000;
+  --galaxy-color: #463B8A;
+  --orange-color: #FF7D00;
+  --accent-color: #8A7F3B;
+  --dark-galaxy-color: #1A143D;
+  --bg-grey-color: #1D1D1B;
+  --bg-page-color: #0E0C1C;
+  --white-color: #FFFFFF;
+  --black-color: #000000;
 }
 
 
 /* section general property color */
 
 .text-galaxy {
-    color: var(--galaxy-color);
+  color: var(--galaxy-color);
 }
 
 .text-orange-color {
-    color: var(--orange-color);
+  color: var(--orange-color);
 }
 
 
 /* General text elements */
 
 body {
-    font-family: 'Satoshi-Regular';
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--white-color);
-    background-color: var(--bg-page-color);
+  font-family: 'Satoshi-Regular';
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white-color);
+  background-color: var(--bg-page-color);
 }
 
 
 /* buttons style */
 
 .button-base {
-    text-transform: uppercase;
-    border-radius: 8px;
-    background-color: transparent;
-    font-size: 14px;
-    font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .button-secondary {
-    border: 1px solid var(--orange-color);
-    color: var(--orange-color);
+  border: 1px solid var(--orange-color);
+  color: var(--orange-color);
 }
 
 .button-secondary:hover {
-    background-color: var(--orange-color);
-    color: var(--white-color);
+  background-color: var(--orange-color);
+  color: var(--white-color);
 }
 
 .button-white {
-    border: 1px solid var(--white-color);
-    color: var(--white-color);
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
 }
 
 .button-white:hover {
-    background-color: var(--white-color);
-    color: var(--orange-color);
+  background-color: var(--white-color);
+  color: var(--orange-color);
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Satoshi-Bold';
+  font-family: 'Satoshi-Bold';
 }
 
 h1 {
-    font-size: 64px;
-    letter-spacing: -2px;
+  font-size: 64px;
+  letter-spacing: -2px;
 }
 
 h2 {
-    font-size: 40px;
-    letter-spacing: -1px;
+  font-size: 40px;
+  letter-spacing: -1px;
 }
 
 h3 {
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: 150%;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 150%;
 }
 
 h5 {
-    font-family: 'Satoshi-Medium';
-    font-size: 32px;
-    line-height: 150%;
+  font-family: 'Satoshi-Medium';
+  font-size: 32px;
+  line-height: 150%;
 }
 
 .text-small {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 strong {
-    font-family: 'Satoshi-Bold';
+  font-family: 'Satoshi-Bold';
 }
 
 .navbar li {
-    font-family: 'Satoshi-Medium';
-    font-size: 16px;
-    text-transform: uppercase;
-    position: relative;
+  font-family: 'Satoshi-Medium';
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .navbar li>a {
-    color: var(--white-color) !important;
+  color: var(--white-color) !important;
 }
 
 .navbar li:hover,
 .navbar li.active {
-    border-bottom: 1px solid var(--white-color);
+  border-bottom: 1px solid var(--white-color);
 }
 
 .navbar li:hover::after,
 .navbar li.active::after {
-    position: absolute;
-    bottom: -5px;
-    left: 46%;
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid var(--bg-page-color);
-    background-color: var(--white-color);
+  position: absolute;
+  bottom: -5px;
+  left: 46%;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-page-color);
+  background-color: var(--white-color);
 }
 
 .navbar li.active>a {
-    color: var(--orange-color) !important;
+  color: var(--orange-color) !important;
 }
 
 .bg-headpage {
-    background: url('../img/astronomy.jpg') no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 500px;
-    padding-top: 70px;
+  background: url('../img/astronomy.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+  padding-top: 70px;
 }
 
 .bg-headpage::before,
 .community_card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .bg-head_home {
-    background-image: url('../img/home-background.jpg');
-    height: 830px;
+  background-image: url('../img/home-background.jpg');
+  height: 830px;
 }
 
 .bg-head_services {
-    background-image: url('../img/services-header.png');
+  background-image: url('../img/services-header.png');
 }
 
 .bg-head_reach-us {
-    height: 700px;
-    padding-top: 70px;
-    overflow: hidden;
+  height: 700px;
+  padding-top: 70px;
+  overflow: hidden;
 }
 
 .bg-head_origins {
-    background-image: url('../img/origins-header.jpg');
+  background-image: url('../img/origins-header.jpg');
 }
 
 .bg-head_observatory {
-    background-image: url('../img/osservatorio-background.jpg');
+  background-image: url('../img/osservatorio-background.jpg');
 }
 
 .bg-head_tourism {
-    background-image: url('../img/tourism-background.jpg');
+  background-image: url('../img/tourism-background.jpg');
 }
 
 .bg-head_community {
-    background-image: url('../img/community-background.jpg');
+  background-image: url('../img/community-background.jpg');
 }
 
 .bg-head_home .title-head {
-    margin-top: 12rem;
+  margin-top: 12rem;
 }
 
 .bg-astreafest {
-    background-image: url('../img/astreafest-background.jpg');
+  background-image: url('../img/astreafest-background.jpg');
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-    content: '>';
-    color: var(--white-color);
+  content: '>';
+  color: var(--white-color);
 }
 
 .title-head {
-    border-bottom: 2px solid var(--white-color);
+  border-bottom: 2px solid var(--white-color);
 }
 
 .head-cit {
-    bottom: 0;
-    left: 0;
-    right: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .title-head::before,
 .collapse .navbar-brand::before {
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--white-color);
-    transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--white-color);
+  transform: rotate(45deg);
 }
 
 .mobile-close-Btn {
-    right: -20%;
-    top: 30px;
+  right: -20%;
+  top: 30px;
 }
 
 i.lg-icon {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 i.md-icon {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 
 /* footer style */
 
 .footer-page {
-    background: url('../img/footer_img.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 500px;
-    padding-top: 100px;
+  background: url('../img/footer_img.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 500px;
+  padding-top: 100px;
 }
 
 .footer-page::before {
-    background-color: rgba(29, 29, 27, 0.2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    content: '';
+  background-color: rgba(29, 29, 27, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
 }
 
 
@@ -267,13 +267,13 @@ i.md-icon {
 */
 
 .nav-pills .nav-link {
-    color: var(--white-color);
+  color: var(--white-color);
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background-color: transparent;
-    color: var(--orange-color);
+  background-color: transparent;
+  color: var(--orange-color);
 }
 
 
@@ -284,39 +284,39 @@ i.md-icon {
 
 .card_left_origins_observatory_head,
 .card_right_origins_observatory_head {
-    border-bottom: 2px solid var(--white-color);
+  border-bottom: 2px solid var(--white-color);
 }
 
 .card_left_origins_observatory_head::before {
-    position: absolute;
-    right: 0;
-    bottom: -4px;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--white-color);
-    transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--white-color);
+  transform: rotate(45deg);
 }
 
 .card_origins_observatory_img {
-    width: 100%;
+  width: 100%;
 }
 
 .card_right_origins_observatory_head::before {
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--white-color);
-    transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--white-color);
+  transform: rotate(45deg);
 }
 
 .capt-img p {
-    background-color: black;
-    opacity: 55%;
-    padding: 5%;
+  background-color: black;
+  opacity: 55%;
+  padding: 5%;
 }
 
 
@@ -325,16 +325,16 @@ i.md-icon {
 */
 
 .card_environment_img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .card_environment_head {
-    text-align: center;
+  text-align: center;
 }
 
 .card_environment_head h4 {
-    color: var(--orange-color) !important;
+  color: var(--orange-color) !important;
 }
 
 
@@ -344,149 +344,152 @@ i.md-icon {
 /* card for elements of list in home */
 
 .card-triangle_element {
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    background-color: var(--bg-grey-color);
-    min-height: 200px;
-    border-radius: 10px;
-    margin-left: 5rem;
-    z-index: 0;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  background-color: var(--bg-grey-color);
+  min-height: 200px;
+  border-radius: 10px;
+  margin-left: 5rem;
+  z-index: 0;
 }
 
 .home-card-triangle {
-    margin-top: 10rem;
+  margin-top: 10rem;
 }
 
 .home-card-triangle img {
-    z-index: 1;
-    position: absolute;
-    bottom: -45%;
-    left: -16%;
-    width: 55%;
+  z-index: 1;
+  position: absolute;
+  bottom: -45%;
+  left: -16%;
+  width: 55%;
 }
 
 .card-triangle_right img {
-    left: auto;
-    right: -16%;
+  left: auto;
+  right: -16%;
 }
 
 .card-triangle_description {
-    margin: 0 8rem;
+  margin: 0 8rem;
 }
 
 .card-triangle_right .card-triangle_element {
-    margin-right: 5rem;
-    margin-left: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  margin-right: 5rem;
+  margin-left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 }
 
 
 /* card astreafest in home */
 
 .home-astreafest img {
-    width: 100%;
+  width: 100%;
 }
 
 .home-astreafest_description {
-    top: 32%;
-    left: 21%;
+  top: 32%;
+  left: 21%;
 }
 
 
 /* services section */
 
 .card-intro {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .service_title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: auto;
-    color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: auto;
+  color: white;
 }
 
 .link-img:hover img {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .link-img:hover h4 {
-    font-weight: bolder;
-    color: var(--orange-color);
+  font-weight: bolder;
+  color: var(--orange-color);
 }
 
 
 /* observatory-tourism section */
 
 .obs-tourism_card-event {
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    background-color: var(--bg-grey-color);
-    min-height: 200px;
-    border-radius: 10px;
-    margin-left: 0;
-    z-index: 0;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  background-color: var(--bg-grey-color);
+  min-height: 200px;
+  border-radius: 10px;
+  margin-left: 0;
+  z-index: 0;
 }
 
 .card-event_description img {
-    height: 100%;
-    max-height: 280px;
+  height: 100%;
+  max-height: 280px;
 }
 
 
 /* astreafest section */
 
 .card-astreafest::before {
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--white-color);
-    transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--white-color);
+  transform: rotate(45deg);
 }
 
 
 /* community section */
 .community_card-title {
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .community_card-title p {
-    font-size: 20px;
-    font-family: 'Satoshi-Bold';
+  font-size: 20px;
+  font-family: 'Satoshi-Bold';
 }
 
 .community_card-title i {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .community_card-img {
-    height: 280px;
-    width: 190px;
-    object-fit: cover;
+  height: 280px;
+  width: 190px;
+  object-fit: cover;
 }
+
 .community_card .community_card-img {
-    border: 2px solid transparent;
-    transition: all .2s ease-in-out;
+  border: 2px solid transparent;
+  transition: all .2s ease-in-out;
 }
-a:hover .community_card, a.active .community_card{
-    transform: scale(1.1);
-    border-color: var(--orange-color);
+
+a:hover .community_card, a.active .community_card {
+  transform: scale(1.1);
+  border-color: var(--orange-color);
 }
+
 a:hover .community_card .community_card-img, a.active .community_card .community_card-img {
-    border: 2px solid var(--orange-color);
+  border: 2px solid var(--orange-color);
 }
 
 
 /* modals section */
 
 .modal_tourism {
-    background-color: var(--galaxy-color);
-    color: var(--white-color);
+  background-color: var(--galaxy-color);
+  color: var(--white-color);
 }
 
 
@@ -495,14 +498,14 @@ a:hover .community_card .community_card-img, a.active .community_card .community
  */
 
 #earth {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    background-color: var(--bg-page-color);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-color: var(--bg-page-color);
 }
 
 #earth canvas {
-    mix-blend-mode: lighten;
+  mix-blend-mode: lighten;
 }
 
 
@@ -511,13 +514,13 @@ a:hover .community_card .community_card-img, a.active .community_card .community
  */
 
 .v-line-reachus {
-    position: absolute;
-    height: 127%;
-    width: 5px;
-    inset: 0;
-    top: -125px;
-    background-color: var(--white-color);
-    z-index: -1;
+  position: absolute;
+  height: 127%;
+  width: 5px;
+  inset: 0;
+  top: -125px;
+  background-color: var(--white-color);
+  z-index: -1;
 }
 
 
@@ -527,7 +530,7 @@ a:hover .community_card .community_card-img, a.active .community_card .community
 
 .card-reachus:first-child h2,
 .card-reachus:nth-child(3) h2 {
-    max-width: 80%;
+  max-width: 80%;
 }
 
 
@@ -536,47 +539,47 @@ a:hover .community_card .community_card-img, a.active .community_card .community
  */
 
 .card-reachus::before {
-    content: '';
-    position: absolute;
-    top: 70px;
-    left: -12.5px;
-    width: 25px;
-    height: 25px;
-    border: 4px solid var(--white-color);
-    border-radius: 100%;
-    background-color: var(--black-color);
+  content: '';
+  position: absolute;
+  top: 70px;
+  left: -12.5px;
+  width: 25px;
+  height: 25px;
+  border: 4px solid var(--white-color);
+  border-radius: 100%;
+  background-color: var(--black-color);
 }
 
 .card-reachus:nth-child(3)::before {
-    top: 63px;
-    left: -20px;
-    width: 40px;
-    height: 40px;
+  top: 63px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
 }
 
 .reachus-stat {
-    z-index: 1;
-    height: 100%;
+  z-index: 1;
+  height: 100%;
 }
 
 .reachus-triangle {
-    z-index: -1;
+  z-index: -1;
 }
 
 #reachus-stat-carousel .carousel-item {
-    height: 300px;
+  height: 300px;
 }
 
 .bg-landing-mars {
-    width: 100%;
-    height: 415px;
-    background-color: var(--bg-page-color);
-    background-blend-mode: lighten;
-    background-image: url('../img/mars_landing.jpg');
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    z-index: -1;
+  width: 100%;
+  height: 415px;
+  background-color: var(--bg-page-color);
+  background-blend-mode: lighten;
+  background-image: url('../img/mars_landing.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 
@@ -585,32 +588,32 @@ a:hover .community_card .community_card-img, a.active .community_card .community
  */
 
 .nav-wrapper-astreafest.fixed {
-    position: fixed;
-    top: 66px;
-    left: 0;
-    width: 100%;
-    background-color: var(--bg-page-color);
-    z-index: 1;
+  position: fixed;
+  top: 66px;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-page-color);
+  z-index: 1;
 }
 
 .nav-wrapper-astreafest.fixed .nav-pills {
-    padding: 0 31px;
+  padding: 0 31px;
 }
 
 .event-day strong {
-    background-color: var(--bg-page-color);
-    z-index: 1;
+  background-color: var(--bg-page-color);
+  z-index: 1;
 }
 
 .event-day::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    top: calc(50% - 1px);
-    background-color: var(--orange-color);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: calc(50% - 1px);
+  background-color: var(--orange-color);
+  z-index: -1;
 }
 
 
@@ -619,169 +622,202 @@ a:hover .community_card .community_card-img, a.active .community_card .community
 */
 
 @media only screen and (min-width: 992px) {
-    .bg-dotted {
-        background-image: url('../img/bg.svg');
-        background-repeat: repeat-y;
-        background-size: 3%;
-        background-position: 4rem 0;
-    }
-    .indentation-left {
-        padding-left: 9rem;
-    }
-    .indentation-right {
-        padding-right: 9rem;
-    }
-    /**
+  .bg-dotted {
+    background-image: url('../img/bg.svg');
+    background-repeat: repeat-y;
+    background-size: 3%;
+    background-position: 4rem 0;
+  }
+
+  .indentation-left {
+    padding-left: 9rem;
+  }
+
+  .indentation-right {
+    padding-right: 9rem;
+  }
+
+  /**
    * Vertical line
    */
-    .v-line-reachus {
-        margin: 0 auto;
-        height: 120%;
-    }
-    /**
+  .v-line-reachus {
+    margin: 0 auto;
+    height: 120%;
+  }
+
+  /**
    * Card title fix width
    */
-    .card-reachus:first-child h2,
-    .card-reachus:nth-child(3) h2 {
-        max-width: 80%;
-        text-indent: 40%;
-    }
-    .card-reachus:first-child::before {
-        left: unset;
-        right: -12.5px;
-    }
-    .card-reachus:nth-child(2)::before {
-        left: -12.5px;
-        right: unset;
-    }
-    .card-reachus:nth-child(3)::before {
-        left: unset;
-        right: -20px;
-    }
+  .card-reachus:first-child h2,
+  .card-reachus:nth-child(3) h2 {
+    max-width: 80%;
+    text-indent: 40%;
+  }
+
+  .card-reachus:first-child::before {
+    left: unset;
+    right: -12.5px;
+  }
+
+  .card-reachus:nth-child(2)::before {
+    left: -12.5px;
+    right: unset;
+  }
+
+  .card-reachus:nth-child(3)::before {
+    left: unset;
+    right: -20px;
+  }
 }
 
-@media screen and (max-device-width: 992px) {
-    h3 {
-        font-size: 26px;
-    }
-    .navbar-collapse {
-        position: fixed;
-        left: -1200px;
-        width: 80vw;
-        top: 0;
-        bottom: 0;
-        background-color: var(--galaxy-color);
-        transition: left 0.5s;
-    }
-    .navbar-collapse:after {
-        z-index: -1;
-        width: 20vw;
-        background-color: rgba(26, 20, 61, 0.8);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: -20vw;
-        content: '';
-    }
-    .navbar-collapse.show {
-        left: 0;
-        transition: left 0.5s;
-    }
-    .navbar-collapse .close {
-        top: 6vw;
-        right: -13vw;
-        z-index: 5;
-    }
-    .navbar li:hover,
-    .navbar li.active {
-        border: 0;
-    }
-    .navbar li:hover::after,
-    .navbar li.active::after {
-        content: none;
-    }
-    .home-card-triangle {
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 0;
-    }
-    .home-card-triangle img {
-        position: relative;
-        width: 100%;
-        left: 0;
-    }
-    .home-card-triangle.card-triangle_right {
-        flex-direction: column-reverse;
-    }
-    .footer-page {
-        padding-top: 45px;
-    }
-    .footer_bottom-el {
-        flex-direction: column-reverse;
-    }
-    .footer_bottom-el .justify-content-end {
-        justify-content: center !important;
-    }
-    .footer-page .footer_btn-subscribe {
-        text-align: center;
-    }
-    #footer-description {
-        display: none;
-    }
-    #home_carouselCommunity .carousel-item {
-        min-height: 200px;
-    }
-    .card-triangle_element,
-    .obs-tourism_card-event {
-        margin-left: 0;
-        border-radius: 0;
-        margin-top: -7rem;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    }
-    .card-triangle_right .card-triangle_element,
-    .card-triangle_element,
-    .obs-tourism_card-event {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    }
-    .obs-tourism_card-event h2 {
-        font-size: 20px;
-    }
-    .card-triangle_right .card-triangle_element {
-        margin-right: 0;
-    }
-    .card-triangle_description {
-        margin: 5rem 0;
-    }
-    .card-event_description {
-        margin-top: 2rem;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .home-astreafest img {
-        width: auto;
-    }
-    .home-astreafest_description {
-        left: 0;
-        top: auto;
-        bottom: 0;
-        margin-bottom: 3rem;
-    }
-    .community_card-img {
-        height: 200px;
-        width: 140px;
-    }
-    .community_card-title p {
-        font-size: 16px;
-    }
-    .nav-community {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-    }
+@media screen and (max-device-width: 991px) {
+  h3 {
+    font-size: 26px;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    left: -1200px;
+    width: 80vw;
+    top: 0;
+    bottom: 0;
+    background-color: var(--galaxy-color);
+    transition: left 0.5s;
+  }
+
+  .navbar-collapse:after {
+    z-index: -1;
+    width: 20vw;
+    background-color: rgba(26, 20, 61, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -20vw;
+    content: '';
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 0.5s;
+  }
+
+  .navbar-collapse .close {
+    top: 6vw;
+    right: -13vw;
+    z-index: 5;
+  }
+
+  .navbar li:hover,
+  .navbar li.active {
+    border: 0;
+  }
+
+  .navbar li:hover::after,
+  .navbar li.active::after {
+    content: none;
+  }
+
+  .home-card-triangle {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .home-card-triangle img {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  .home-card-triangle.card-triangle_right {
+    flex-direction: column-reverse;
+  }
+
+  .footer-page {
+    padding-top: 45px;
+  }
+
+  .footer_bottom-el {
+    flex-direction: column-reverse;
+  }
+
+  .footer_bottom-el .justify-content-end {
+    justify-content: center !important;
+  }
+
+  .footer-page .footer_btn-subscribe {
+    text-align: center;
+  }
+
+  #footer-description {
+    display: none;
+  }
+
+  #home_carouselCommunity .carousel-item {
+    min-height: 200px;
+  }
+
+  .card-triangle_element,
+  .obs-tourism_card-event {
+    margin-left: 0;
+    border-radius: 0;
+    margin-top: -7rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .card-triangle_right .card-triangle_element,
+  .card-triangle_element,
+  .obs-tourism_card-event {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  }
+
+  .obs-tourism_card-event h2 {
+    font-size: 20px;
+  }
+
+  .card-triangle_right .card-triangle_element {
+    margin-right: 0;
+  }
+
+  .card-triangle_description {
+    margin: 5rem 0;
+  }
+
+  .card-event_description {
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home-astreafest img {
+    width: auto;
+  }
+
+  .home-astreafest_description {
+    left: 0;
+    top: auto;
+    bottom: 0;
+    margin-bottom: 3rem;
+  }
+
+  .community_card-img {
+    height: 200px;
+    width: 140px;
+  }
+
+  .community_card-title p {
+    font-size: 16px;
+  }
+
+  .nav-community {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
 }
 
 
 @media only screen and (max-width: 1350px) {
-    .bg-dotted {
-       background-position-x: left;
-    }
+  .bg-dotted {
+    background-position-x: left;
+  }
 }
