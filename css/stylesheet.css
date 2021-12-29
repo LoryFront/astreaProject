@@ -815,6 +815,11 @@ a.active .community_card .community_card-img {
     margin-bottom: 3rem;
   }
 
+  a:hover .community_card,
+  a.active .community_card {
+    transform: scale(1);
+  }
+
   .community_card-img {
     height: 200px;
     width: 140px;
