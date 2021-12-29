@@ -9,12 +9,12 @@ function activeElement(idAttivo){
     attiva.classList.add("active");
 }
 function runOnScroll() {
-    let head = document.getElementsByTagName("header")[0];   
+    let head = document.getElementsByTagName("header")[0];
     if (window.scrollY >= 100) {
-        head.style.backgroundColor = "#0E0C1C";        
+        head.style.backgroundColor = "#0E0C1C";
     } else {
         head.style.backgroundColor = "transparent";
-    }    
+    }
 }
 window.addEventListener("scroll", runOnScroll);
 
@@ -56,3 +56,8 @@ $("#form-prenotazione").submit(function(e){
     }
     return false;
 });
+
+const test = document.getElementById('test')
+window.addEventListener('resize', function() {
+    console.log(test.currentSrc)
+})
