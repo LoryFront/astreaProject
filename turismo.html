@@ -387,43 +387,14 @@
                                 acconsento al trattamento dei dati.</label>
                         </div>
                         <div class="footer_btn-subscribe text-center">
-                            <button data-dismiss="modal" class="button-base button-secondary py-2 px-5 mt-3" type="submit">Invio</button>
+                            <button data-dismiss="modal" data-toggle="modal" class="button-base button-secondary py-2 px-5 mt-3" type="submit" data-target="#modalSuccess">Invio</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- modal more info -->
-    <div class="modal fade" id="modalInfoTourism" tabindex="-1" aria-labelledby="modalInfoTourism"
-         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content modal_tourism">
-                <div class="modal-header border-0 justify-content-end pb-0">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-x text-white"></i>
-                    </button>
-                </div>
-                <div class="modal-body pt-0">
-                    <h5 class="modal-title text-center" id="modalInfoTourismLabel">Vuoi saperne di più?</h5>
-                    <form class="col-lg-8 mx-auto col-12">
-                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque rutrum
-                            hendrerit placerat at nulla interdum eget.
-                        </p>
-                        <div class="form-group">
-                            <label for="mailInsert" class="mb-0">Email</label>
-                            <input type="email" class="form-control" id="mailInsert"
-                                   placeholder="Inserisci l'indirizzo email">
-                        </div>
-                        <div class="footer_btn-subscribe text-center">
-                            <button data-dismiss="modal" class="button-base button-secondary py-2 px-5 mt-3" type="submit">Invia
-                                email</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- modal success -->
     <div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="modalSuccess" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -438,7 +409,7 @@
                         Prenotazione riuscita!</h5>
                     <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="footer_btn-subscribe text-center">
-                        <button class="button-base button-secondary py-2 px-5 mt-3">Invia
+                        <button data-dismiss="modal" class="button-base button-secondary py-2 px-5 mt-3">Invia
                             email</button>
                     </div>
                 </div>
