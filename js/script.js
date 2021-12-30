@@ -41,6 +41,16 @@ function accordionOpen() {
     }
 
 }
+
+/** fix arrow position in carousel */
+let carouselControlHeight = $('.carousel-item img').height()
+$('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
+
+window.addEventListener('resize', function() {
+    carouselControlHeight = $('.carousel-item img').height()
+    $('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
+})
+
 $("#form-newsletter").submit(function(e){
     if(e.target.checkValidity()){
         $('#modalNewsletter').modal('show');
