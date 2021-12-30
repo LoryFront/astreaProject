@@ -853,3 +853,9 @@ a.active .community_card .community_card-img {
     background-position-x: left;
   }
 }
+
+@media only screen and (max-width: 575px) {
+  .nav-wrapper-astreafest.fixed .nav-pills {
+    padding: 0 15px;
+  }
+}
