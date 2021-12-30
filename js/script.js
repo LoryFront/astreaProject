@@ -42,13 +42,35 @@ function accordionOpen() {
 
 }
 
+/** fixed navbar on scroll for daily event */
+
+$(document).ready(function() {
+    window.onscroll = function() {
+        if (window.pageYOffset >= 548 - 66) {
+            $('.nav-wrapper-astreafest').addClass('fixed').children('.nav-pills').addClass('container')
+            $('#calendar').hide()
+        } else {
+            $('.nav-wrapper-astreafest').removeClass('fixed container').children('.nav-pills').removeClass('container')
+            $('#calendar').show()
+        }
+    }
+
+    $(document).on('click', 'a[href^="#"]', function(event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 120
+        }, 500);
+    });
+})
+
 /** fix arrow position in carousel */
-let carouselControlHeight = $('.carousel-item.active img').height()
-$('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
+let carouselControlHeight = $('#carouselSliderOrigini .carousel-item.active img').height()
+$('#carouselSliderOrigini .carousel-control-next, #carouselSliderOrigini .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 
 window.addEventListener('resize', function() {
-    carouselControlHeight = $('.carousel-item.active img').height()
-$('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
+    carouselControlHeight = $('#carouselSliderOrigini .carousel-item.active img').height()
+$('#carouselSliderOrigini .carousel-control-next, #carouselSliderOrigini .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 })
 
 $("#form-newsletter").submit(function(e){
@@ -68,6 +90,9 @@ function openSuccessModal(e){
 
 $("#form-prenotazione").submit(openSuccessModal);
 $("#form-joinCommunity").submit(openSuccessModal);
+
+
+
 
 
 const test = document.getElementById('test')

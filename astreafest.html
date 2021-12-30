@@ -73,8 +73,8 @@
         <div class="container">
             <div class="nav-wrapper-astreafest">
                 <div class="nav-pills astreafest d-flex flex-column flex-sm-row justify-content-between align-items-center">
-                    <strong class="text-uppercase">Calendar</strong>
-                    <nav id="event-nav" class="nav align-items-center">
+                    <strong id="calendar" class="text-uppercase">Calendar</strong>
+                    <nav id="event-nav" class="nav align-items-center justify-content-center">
                         <a class="nav-link active" href="#first"><strong>17</strong></a>
                         <a class="nav-link" href="#second"><strong>18</strong></a>
                         <a class="nav-link" href="#third"><strong>19</strong></a>
@@ -211,7 +211,6 @@
                 </div>
             </div>
             <div class="card-astreafest border-bottom border-light position-relative mb-4">
-
                     <div class="row align-items-center">
                         <h3 class="col-lg-7">La fotografia astronomica</h3>
                         <h6 class="col-lg-3 col-6">WORKSHOP</h6>
@@ -964,25 +963,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 
         <script rel="script" src="js/script.js"></script>
-        <script>
-            $(document).ready(function() {
-                window.onscroll = function() {
-                    if (window.pageYOffset >= 548 - 66) {
-                        $('.nav-wrapper-astreafest').addClass('fixed').children('.nav-pills').addClass('container')
-                    } else {
-                        $('.nav-wrapper-astreafest').removeClass('fixed container').children('.nav-pills').removeClass('container')
-                    }
-                }
-
-                $(document).on('click', 'a[href^="#"]', function(event) {
-                    event.preventDefault();
-
-                    $('html, body').animate({
-                        scrollTop: $($.attr(this, 'href')).offset().top - 120
-                    }, 500);
-                });
-            })
-        </script>
 </body>
 
 </html>
