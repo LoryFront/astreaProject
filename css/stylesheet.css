@@ -688,7 +688,12 @@ a.active .community_card .community_card-img {
     right: -20px;
   }
 }
-
+@media screen and (max-width: 1024px) {
+    .nav-community {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+}
 @media screen and (max-width: 991px) {
   h3 {
     font-size: 26px;
@@ -810,7 +815,8 @@ a.active .community_card .community_card-img {
   } */
 
   .home-astreafest img {
-    width: auto;
+      width: auto;
+      max-height: 550px;
   }
 
   .home-astreafest_description {
@@ -832,11 +838,6 @@ a.active .community_card .community_card-img {
 
   .community_card-title p {
     font-size: 16px;
-  }
-
-  .nav-community {
-    overflow-x: auto;
-    flex-wrap: nowrap;
   }
 
   .card_origins_observatory_img {
