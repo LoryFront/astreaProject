@@ -550,8 +550,7 @@ a.active .community_card .community_card-img {
    * Card title fix width
    */
 
-.card-reachus:first-child h2,
-.card-reachus:nth-child(3) h2 {
+.card-reachus h2 {
   max-width: 80%;
 }
 
