@@ -843,6 +843,7 @@ a.active .community_card .community_card-img {
         right: 0;
         bottom: 0;
         left: 0;
+        z-index: 0;
     }
     .capt-img p {
         background-color: transparent;
