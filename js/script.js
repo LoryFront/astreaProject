@@ -43,12 +43,13 @@ function accordionOpen() {
 }
 
 /** fix arrow position in carousel */
-let carouselControlHeight = $('.carousel-item img').height()
+let carouselControlHeight = $('.carousel-item.active img').height()
 $('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 
 window.addEventListener('resize', function() {
-    carouselControlHeight = $('.carousel-item img').height()
-    $('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
+    console.log($('.carousel-item.active img').height())
+    carouselControlHeight = $('.carousel-item.active img').height()
+$('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 })
 
 $("#form-newsletter").submit(function(e){
