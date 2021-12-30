@@ -156,7 +156,7 @@
 							<div class="col-lg-6 pl-lg-5">
 								<div class="mt-3 mt-lg-0 text-center text-lg-left">
 									<button class="button-base button-secondary py-2 px-5" data-toggle="modal"
-										data-target="#modalPrenotaObservatory">Unisciti</button>
+										data-target="#modalJoinCommunity">Unisciti</button>
 								</div>
 
 							</div>
@@ -284,7 +284,7 @@
 							<div class="col-lg-6 pl-lg-5">
 								<div class="mt-3 mt-lg-0 text-center text-lg-left">
 									<button class="button-base button-secondary py-2 px-5" data-toggle="modal"
-										data-target="#modalPrenotaObservatory">Unisciti</button>
+										data-target="#modalJoinCommunity">Unisciti</button>
 								</div>
 							</div>
 						</div>
@@ -408,7 +408,7 @@
 							<div class="col-lg-6 pl-lg-5">
 								<div class="mt-3 mt-lg-0 text-center text-lg-left">
 									<button class="button-base button-secondary py-2 px-5" data-toggle="modal"
-										data-target="#modalPrenotaObservatory">Unisciti</button>
+										data-target="#modalJoinCommunity">Unisciti</button>
 								</div>
 							</div>
 						</div>
@@ -515,7 +515,7 @@
 							<div class="col-lg-6 pl-lg-5">
 								<div class="mt-3 mt-lg-0 text-center text-lg-left">
 									<button class="button-base button-secondary py-2 px-5" data-toggle="modal"
-										data-target="#modalPrenotaObservatory">Unisciti</button>
+										data-target="#modalJoinCommunity">Unisciti</button>
 								</div>
 							</div>
 						</div>
@@ -616,7 +616,7 @@
 							<div class="col-lg-6 pl-lg-5">
 								<div class="mt-3 mt-lg-0 text-center text-lg-left">
 									<button class="button-base button-secondary py-2 px-5" data-toggle="modal"
-										data-target="#modalPrenotaObservatory">Unisciti</button>
+										data-target="#modalJoinCommunity">Unisciti</button>
 								</div>
 							</div>
 						</div>
@@ -793,6 +793,73 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- modal prenotazione -->
+	<div class="modal fade" id="modalJoinCommunity" tabindex="-1" aria-labelledby="modalJoinCommunity"
+	aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered">
+		 <div class="modal-content modal_tourism">
+				 <div class="modal-header border-0 justify-content-end pb-0">
+						 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								 <i class="bi bi-x text-white"></i>
+						 </button>
+				 </div>
+				 <div class="modal-body pt-0">
+						 <h5 class="modal-title text-center" id="modalJoinCommunityLabel">
+								 Unisciti alla community!</h5>
+						 <p class="text-center">Inserisci i tuoi dati e unisciti alla community!
+						 </p>
+						 <form id="form-joinCommunity" class="col-lg-8 mx-auto col-12">
+								 <div class="form-group">
+										 <label for="nomeInput" class="mb-0">Nome</label>
+										 <input type="text" class="form-control" id="nomeInput" placeholder="Nome">
+								 </div>
+								 <div class="form-group">
+										 <label for="cognomeInput" class="mb-0">Cognome</label>
+										 <input type="text" class="form-control" id="cognomeInput" placeholder="Cognome">
+								 </div>
+								 <div class="form-group">
+										 <label for="inputEmail1" class="mb-0">Email</label>
+										 <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+								 </div>
+								 <div class="form-group form-check">
+										 <input type="checkbox" class="form-check-input" id="consensoCheck">
+										 <label class="form-check-label text-orange-color" for="consensoCheck">Ho letto l’informativa
+												 sulla privacy
+												 ed
+												 acconsento al trattamento dei dati.</label>
+								 </div>
+								 <div class="footer_btn-subscribe text-center">
+										 <button class="button-base button-secondary py-2 px-5 mt-3" type="submit"
+										 data-dismiss="modal"
+														 data-toggle="modal" data-target="#modalSuccess">Unisciti</button>
+								 </div>
+						 </form>
+				 </div>
+		 </div>
+ </div>
+</div>
+<!-- modal success -->
+<div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="modalSuccess" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered">
+		 <div class="modal-content modal_tourism">
+				 <div class="modal-header border-0 justify-content-end pb-0">
+						 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								 <i class="bi bi-x text-white"></i>
+						 </button>
+				 </div>
+				 <div class="modal-body pt-0">
+						 <h5 class="modal-title text-center" id="modalSuccessLabel">
+								 Ora fai parte della community</h5>
+						 <p class="text-center">Sarai aggiornato con tutti gli eventi della communiti.</p>
+						 <div class="footer_btn-subscribe text-center">
+								 <button data-dismiss="modal" class="button-base button-secondary py-2 px-5 mt-3">Torna alla navigazione</button>
+						 </div>
+				 </div>
+		 </div>
+ </div>
+</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>
