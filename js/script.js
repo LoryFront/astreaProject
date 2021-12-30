@@ -47,7 +47,6 @@ let carouselControlHeight = $('.carousel-item.active img').height()
 $('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 
 window.addEventListener('resize', function() {
-    console.log($('.carousel-item.active img').height())
     carouselControlHeight = $('.carousel-item.active img').height()
 $('.carousel-control-next, .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 })
