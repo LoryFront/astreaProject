@@ -57,7 +57,10 @@ $("#form-prenotazione").submit(function(e){
     return false;
 });
 
+
 const test = document.getElementById('test')
 window.addEventListener('resize', function() {
-    console.log(test.currentSrc)
+    if(test) {
+        console.log(test.currentSrc, test.clientWidth)
+    }
 })

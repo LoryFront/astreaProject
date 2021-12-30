@@ -307,11 +307,14 @@ i.md-icon {
   width: 100%;
   max-height: 450px;
   object-fit: cover;
+}
+
+.card_clipped_left {
   clip-path: polygon(70% 0, 100% 24%, 100% 100%, 30% 100%, 0 79%, 0% 0%);
 }
 
-.card_origins_observatory_img.card_right {
-  clip-path: polygon(27% 0, 100% 0, 100% 80%, 74% 100%, 0 100%, 0 20%);
+.card_clipped_right {
+  clip-path: polygon(30% 0, 100% 0, 100% 79%, 76% 100%, 0 100%, 0 24%);
 }
 
 .card_right_origins_observatory_head::before {
@@ -444,10 +447,11 @@ i.md-icon {
   z-index: 0;
 }
 
+/* Problematica
 .card-event_description img {
   height: 100%;
   max-height: 280px;
-}
+} */
 
 
 /* astreafest section */
@@ -798,11 +802,12 @@ a.active .community_card .community_card-img {
     margin: 5rem 0;
   }
 
+  /* Problematica
   .card-event_description {
     margin-top: 2rem;
     margin-left: 0;
     margin-right: 0;
-  }
+  } */
 
   .home-astreafest img {
     width: auto;
@@ -837,6 +842,9 @@ a.active .community_card .community_card-img {
   .card_origins_observatory_img {
     object-fit: contain;
     max-height: 350px;
+    width: auto;
+    margin: 0 auto;
+    display: flex;
   }
 }
 
