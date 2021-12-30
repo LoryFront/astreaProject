@@ -679,7 +679,7 @@ a.active .community_card .community_card-img {
     right: unset;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
     .nav-community {
         overflow-x: auto;
         flex-wrap: nowrap;
