@@ -6,13 +6,13 @@
 /* Variables section */
 
 :root {
-    --galaxy-color: #463B8A;
+    --galaxy-color: #463c8b;
     --orange-color: #FF7D00;
     --accent-color: #8A7F3B;
     --dark-galaxy-color: #1A143D;
     --bg-grey-color: #1D1D1B;
     --bg-page-color: #0E0C1C;
-    --white-color: #FFFFFF;
+    --white-color: #e8e6f4;
     --black-color: #000000;
 }
 
@@ -263,7 +263,7 @@ i.md-icon {
 }
 
 .footer-page::before {
-    background-color: rgba(29, 29, 27, 0.6);
+    background-color: rgba(29, 29, 27, 0.2);
     position: absolute;
     top: 0;
     left: 0;
