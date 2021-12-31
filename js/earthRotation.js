@@ -255,7 +255,7 @@ function render() {
 */
 function animate() {
   requestAnimationFrame(animate);
-  update();
+  if (window.innerWidth > 576) update();
   render();
 }
 
