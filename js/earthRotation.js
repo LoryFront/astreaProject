@@ -254,7 +254,8 @@
   * Animate the scene.
   */
  function animate() {
-   requestAnimationFrame(animate);
+  requestAnimationFrame(animate);
+   if (window.innerWidth < 576) return;
    update();
    render();
  }
