@@ -1,8 +1,8 @@
 /*section for scripts*/
 let isAccordionOpen = false;
-function activeElement(idAttivo){
+function activeElement(idActive){
     var sezioni = document.getElementsByClassName('section');
-    const attiva = document.getElementById(idAttivo);
+    const attiva = document.getElementById(idActive);
     for(var i = 0; i < sezioni.length; i++){
         sezioni.classList.remove("active");
     }
@@ -65,12 +65,12 @@ $(document).ready(function() {
 })
 
 /** fix arrow position in carousel */
-let carouselControlHeight = $('#carouselSliderOrigini .carousel-item.active img').height()
-$('#carouselSliderOrigini .carousel-control-next, #carouselSliderOrigini .carousel-control-prev').css({'maxHeight': carouselControlHeight})
+let carouselControlHeight = $('#carouselSliderOrigins .carousel-item.active img').height()
+$('#carouselSliderOrigins .carousel-control-next, #carouselSliderOrigins .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 
 window.addEventListener('resize', function() {
-    carouselControlHeight = $('#carouselSliderOrigini .carousel-item.active img').height()
-$('#carouselSliderOrigini .carousel-control-next, #carouselSliderOrigini .carousel-control-prev').css({'maxHeight': carouselControlHeight})
+    carouselControlHeight = $('#carouselSliderOrigins .carousel-item.active img').height()
+$('#carouselSliderOrigins .carousel-control-next, #carouselSliderOrigins .carousel-control-prev').css({'maxHeight': carouselControlHeight})
 })
 
 $("#form-newsletter").submit(function(e){
@@ -88,7 +88,7 @@ function openSuccessModal(e){
     return false;
 }
 
-$("#form-prenotazione").submit(openSuccessModal);
+$("#form-booking").submit(openSuccessModal);
 $("#form-joinCommunity").submit(openSuccessModal);
 
 
