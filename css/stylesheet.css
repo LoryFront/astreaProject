@@ -524,15 +524,14 @@ a.active .community_card .community_card-img {
 /**
  * COME RAGGIUNGERCI
  */
-
-#earth {
+#earth, #fallback {
     position: absolute;
     top: 0;
     z-index: -1;
     background-color: var(--bg-page-color);
 }
 
-#earth canvas {
+#earth canvas, #fallback img{
     mix-blend-mode: lighten;
 }
 
