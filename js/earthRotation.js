@@ -118,8 +118,10 @@
    );
    rotationPoint.add( camera );
 
+   let AA = window.innerWidth > 576
+
    // Build the renderer.
-   renderer = new THREE.WebGLRenderer({antialias: true});
+   renderer = new THREE.WebGLRenderer({antialias: AA, powerPreference: 'high-performance'});
    element = renderer.domElement;
    renderer.setSize( window.innerWidth, 700 );
    renderer.shadowMap.enabled;
@@ -152,7 +154,7 @@
    scene.add( light5 );
 
    // Add the Earth sphere model.
-   var geometry = new THREE.SphereGeometry( earthRadius, 128, 128 );
+   var geometry = new THREE.SphereBufferGeometry( earthRadius, 128, 128 );
 
    // Create the Earth materials.
    loader = new THREE.TextureLoader();
@@ -186,7 +188,7 @@
    worldRotationPoint.add( sphere );
 
    // Add the Earth sphere model.
-   var geometryCloud = new THREE.SphereGeometry( earthRadius + 0.2, 128, 128 );
+   var geometryCloud = new THREE.SphereBufferGeometry( earthRadius + 0.2, 128, 128 );
 
    loader = new THREE.TextureLoader();
    loader.setCrossOrigin( 'https://s.codepen.io' );
@@ -255,9 +257,8 @@
   */
  function animate() {
   requestAnimationFrame(animate);
-   if (window.innerWidth < 576) return;
-   update();
-   render();
+  update();
+  render();
  }
 
  function addSkybox() {
