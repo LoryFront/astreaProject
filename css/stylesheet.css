@@ -536,6 +536,12 @@ a.active .community_card .community_card-img {
     mix-blend-mode: lighten;
 }
 
+.reachus-header-text-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    padding-right: 60px;
+}
+
 
 /**
  * Vertical line
