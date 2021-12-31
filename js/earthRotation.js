@@ -83,7 +83,11 @@ setInterval(function() {
 }, 60000);
 
 init();
-animate();
+
+const globalLoader = THREE.DefaultLoadingManager
+globalLoader.onLoad = function(){
+  animate();
+}
 
 /**
 * Initializer function.
