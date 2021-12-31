@@ -8,292 +8,298 @@
  * The main scene.
  */
 
-/**
- * Define constants.
- */
-const TEXTURE_PATH = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/';
 
-/**
-* Create the animation request.
-*/
-if (!window.requestAnimationFrame) {
-  window.requestAnimationFrame = (function() {
-    return window.mozRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    window.oRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    function (callback, element) {
-      // 60 FPS
-      window.setTimeout(callback, 1000 / 60);
-    };
-  })();
-}
+window.addEventListener('load', () => {
+  console.log('page loaded')
 
-/**
-* Set our global variables.
-*/
-var camera,
-    scene,
-    renderer,
-    effect,
-    element,
-    container,
-    sphere,
-    sphereCloud,
-    rotationPoint;
-var degreeOffset = 90;
-var earthRadius = 300;
+  /**
+  * Define constants.
+  */
+  const TEXTURE_PATH = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/';
 
-var getEarthRotation = function() {
-  // Get the current time.
-  var d = new Date();
-  var h = d.getUTCHours();
-  var m = d.getUTCMinutes();
+  /**
+  * Create the animation request.
+  */
+  if (!window.requestAnimationFrame) {
+    window.requestAnimationFrame = (function() {
+      return window.mozRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      function (callback, element) {
+        // 60 FPS
+        window.setTimeout(callback, 1000 / 60);
+      };
+    })();
+  }
 
-  // Calculate total minutes.
-  var minutes = h * 60;
-  minutes += m;
+  /**
+  * Set our global variables.
+  */
+  var camera,
+      scene,
+      renderer,
+      effect,
+      element,
+      container,
+      sphere,
+      sphereCloud,
+      rotationPoint;
+  var degreeOffset = 90;
+  var earthRadius = 300;
 
-  // Turn minutes into degrees.
-  degrees = minutes/3.9907;
+  var getEarthRotation = function() {
+    // Get the current time.
+    var d = new Date();
+    var h = d.getUTCHours();
+    var m = d.getUTCMinutes();
 
-  // Add an offset to match UTC time.
-  degrees += degreeOffset;
-  return degrees;
-}
+    // Calculate total minutes.
+    var minutes = h * 60;
+    minutes += m;
 
-var degrees = getEarthRotation();
+    // Turn minutes into degrees.
+    degrees = minutes/3.9907;
 
-// Calculate Earth's rotation position.
-setInterval(function() {
-  // Get the current time.
-  var d = new Date();
-  var h = d.getUTCHours();
-  var m = d.getUTCMinutes();
+    // Add an offset to match UTC time.
+    degrees += degreeOffset;
+    return degrees;
+  }
 
-  // Calculate total minutes.
-  var minutes = h * 60;
-  minutes += m;
+  var degrees = getEarthRotation();
 
-  // Turn minutes into degrees.
-  degrees = minutes/3.9907;
+  // Calculate Earth's rotation position.
+  setInterval(function() {
+    // Get the current time.
+    var d = new Date();
+    var h = d.getUTCHours();
+    var m = d.getUTCMinutes();
 
-  // Add an offset to match UTC time.
-  degrees += degreeOffset;
-}, 60000);
+    // Calculate total minutes.
+    var minutes = h * 60;
+    minutes += m;
 
-init();
+    // Turn minutes into degrees.
+    degrees = minutes/3.9907;
 
-const globalLoader = THREE.DefaultLoadingManager
-globalLoader.onLoad = function(){
-  animate();
-}
+    // Add an offset to match UTC time.
+    degrees += degreeOffset;
+  }, 60000);
+  init();
 
-/**
-* Initializer function.
-*/
-function init() {
-  // Build the container
-  container = document.querySelector('#earth')
+  const globalLoader = THREE.DefaultLoadingManager
+  globalLoader.onLoad = function(){
+    document.getElementById('loader').classList.add('slide-up')
+    document.getElementById('earth').classList.add('slide-down')
+    animate();
+  }
 
-  // Create the scene.
-  scene = new THREE.Scene();
+  /**
+  * Initializer function.
+  */
+  function init() {
+    // Build the container
+    container = document.querySelector('#earth')
 
-  // Create a rotation point.
-  baseRotationPoint = new THREE.Object3D();
-  baseRotationPoint.position.set( 0, 0, 0 );
-  scene.add( baseRotationPoint );
+    // Create the scene.
+    scene = new THREE.Scene();
 
-  // Create world rotation point.
-  worldRotationPoint = new THREE.Object3D();
-  worldRotationPoint.position.set( 0, 0, 0 );
-  scene.add( worldRotationPoint );
+    // Create a rotation point.
+    baseRotationPoint = new THREE.Object3D();
+    baseRotationPoint.position.set( 0, 0, 0 );
+    scene.add( baseRotationPoint );
 
-  rotationPoint = new THREE.Object3D();
-  rotationPoint.position.set( 0, -200, earthRadius * 2 );
-  baseRotationPoint.add( rotationPoint );
+    // Create world rotation point.
+    worldRotationPoint = new THREE.Object3D();
+    worldRotationPoint.position.set( 0, 0, 0 );
+    scene.add( worldRotationPoint );
 
-  // Create the camera.
-  camera = new THREE.PerspectiveCamera(
-  35, // Angle
-    window.innerWidth / 700, // Aspect Ratio.
-    1, // Near view.
-    10000 // Far view.
-  );
-  rotationPoint.add( camera );
+    rotationPoint = new THREE.Object3D();
+    rotationPoint.position.set( 0, -200, earthRadius * 2 );
+    baseRotationPoint.add( rotationPoint );
 
-  let AA = window.innerWidth >= 768
+    // Create the camera.
+    camera = new THREE.PerspectiveCamera(
+    35, // Angle
+      window.innerWidth / 700, // Aspect Ratio.
+      1, // Near view.
+      10000 // Far view.
+    );
+    rotationPoint.add( camera );
 
-  // Build the renderer.
-  renderer = new THREE.WebGLRenderer({antialias: AA, powerPreference: 'high-performance'});
-  element = renderer.domElement;
-  renderer.setSize( window.innerWidth, 700 );
-  renderer.shadowMap.enabled;
-  container.appendChild( element );
+    let AA = window.innerWidth >= 768
 
-  // Ambient lights
-  var ambient = new THREE.AmbientLight( 0x222222 );
-  scene.add( ambient );
+    // Build the renderer.
+    renderer = new THREE.WebGLRenderer({antialias: AA, powerPreference: 'high-performance'});
+    element = renderer.domElement;
+    renderer.setSize( window.innerWidth, 700 );
+    renderer.shadowMap.enabled;
+    container.appendChild( element );
 
-  // The sun.
-  var light = new THREE.PointLight( 0xffeecc, 2, 5000 );
-  light.position.set( -0, -800, 100 );
-  scene.add( light );
+    // Ambient lights
+    var ambient = new THREE.AmbientLight( 0x222222 );
+    scene.add( ambient );
 
-  // Since the sun is much bigger than a point of light, add four fillers.
-  var light2 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
-  light2.position.set( -0, -800, 250 );
-  scene.add( light2 );
+    // The sun.
+    var light = new THREE.PointLight( 0xffeecc, 2, 5000 );
+    light.position.set( -0, -800, 100 );
+    scene.add( light );
 
-  var light3 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
-  light3.position.set( -0, -800, -150 );
-  scene.add( light3 );
+    // Since the sun is much bigger than a point of light, add four fillers.
+    var light2 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
+    light2.position.set( -0, -800, 250 );
+    scene.add( light2 );
 
-  var light4 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
-  light4.position.set( -0, 800, 100 );
-  scene.add( light4 );
+    var light3 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
+    light3.position.set( -0, -800, -150 );
+    scene.add( light3 );
 
-  var light5 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
-  light5.position.set( -0, -800, 100 );
-  scene.add( light5 );
+    var light4 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
+    light4.position.set( -0, 800, 100 );
+    scene.add( light4 );
 
-  // Add the Earth sphere model.
-  var geometry = new THREE.SphereBufferGeometry( earthRadius, 128, 128 );
+    var light5 = new THREE.PointLight( 0xffffff, 0.6, 4000 );
+    light5.position.set( -0, -800, 100 );
+    scene.add( light5 );
 
-  // Create the Earth materials.
-  loader = new THREE.TextureLoader();
-  loader.setCrossOrigin( 'https://s.codepen.io' );
-  var texture = loader.load( 'img/ColorMap.jpg' );
+    // Add the Earth sphere model.
+    var geometry = new THREE.SphereBufferGeometry( earthRadius, 128, 128 );
 
-  var bump = null;
-  bump = loader.load( TEXTURE_PATH + 'Bump.jpg' );
+    // Create the Earth materials.
+    loader = new THREE.TextureLoader();
+    loader.setCrossOrigin( 'https://s.codepen.io' );
+    var texture = loader.load( 'img/ColorMap.jpg' );
 
-  var spec = null;
-  spec = loader.load( TEXTURE_PATH + 'SpecMask.jpg' );
+    var bump = null;
+    bump = loader.load( TEXTURE_PATH + 'Bump.jpg' );
 
-  var material = new THREE.MeshPhongMaterial({
-    color: "#ffffff",
-    shininess: 6,
-    map: texture,
-    specularMap: spec,
-    specular: "#666666",
-    bumpMap: bump,
-  });
+    var spec = null;
+    spec = loader.load( TEXTURE_PATH + 'SpecMask.jpg' );
 
-  sphere = new THREE.Mesh( geometry, material );
-  sphere.position.set( 0, 0, 0 );
-  sphere.rotation.y = Math.PI;
+    var material = new THREE.MeshPhongMaterial({
+      color: "#ffffff",
+      shininess: 6,
+      map: texture,
+      specularMap: spec,
+      specular: "#666666",
+      bumpMap: bump,
+    });
 
-  // Focus initially on the prime meridian.
-  sphere.rotation.y = -1 * (8.7 * Math.PI / 17);
+    sphere = new THREE.Mesh( geometry, material );
+    sphere.position.set( 0, 0, 0 );
+    sphere.rotation.y = Math.PI;
 
-  // Add the Earth to the scene.https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/Bump.jpg
-  worldRotationPoint.add( sphere );
+    // Focus initially on the prime meridian.
+    sphere.rotation.y = -1 * (8.7 * Math.PI / 17);
 
-  // Add the Earth sphere model.
-  var geometryCloud = new THREE.SphereBufferGeometry( earthRadius + 0.2, 128, 128 );
+    // Add the Earth to the scene.https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/Bump.jpg
+    worldRotationPoint.add( sphere );
 
-  loader = new THREE.TextureLoader();
-  loader.setCrossOrigin( 'https://s.codepen.io' );
-  var alpha = loader.load( 'img/fair_clouds_4k.jpg' );
+    // Add the Earth sphere model.
+    var geometryCloud = new THREE.SphereBufferGeometry( earthRadius + 0.2, 128, 128 );
 
-  var materialCloud = new THREE.MeshPhongMaterial({
-    alphaMap: alpha,
-  });
+    loader = new THREE.TextureLoader();
+    loader.setCrossOrigin( 'https://s.codepen.io' );
+    var alpha = loader.load( 'img/fair_clouds_4k.jpg' );
 
-  materialCloud.transparent = true;
+    var materialCloud = new THREE.MeshPhongMaterial({
+      alphaMap: alpha,
+    });
 
-  sphereCloud = new THREE.Mesh( geometryCloud, materialCloud );
-  scene.add( sphereCloud );
+    materialCloud.transparent = true;
 
-  // Create a glow effect.
-  loader = new THREE.TextureLoader();
-  loader.setCrossOrigin( 'https://s.codepen.io' );
-  var glowMap = loader.load( TEXTURE_PATH + "glow.png" );
+    sphereCloud = new THREE.Mesh( geometryCloud, materialCloud );
+    scene.add( sphereCloud );
 
-  // Create the sprite to add the glow effect.
-  var spriteMaterial = new THREE.SpriteMaterial({
-    map: glowMap,
-    color: 0x0099ff,
-    transparent: false,
-    blending: THREE.AdditiveBlending
-  });
-  var sprite = new THREE.Sprite( spriteMaterial );
-  sprite.scale.set( earthRadius * 2.5, earthRadius * 2.5, 1.0);
-  sphereCloud.add(sprite);
+    // Create a glow effect.
+    loader = new THREE.TextureLoader();
+    loader.setCrossOrigin( 'https://s.codepen.io' );
+    var glowMap = loader.load( TEXTURE_PATH + "glow.png" );
 
-  // Add the skymap.
-  addSkybox();
+    // Create the sprite to add the glow effect.
+    var spriteMaterial = new THREE.SpriteMaterial({
+      map: glowMap,
+      color: 0x0099ff,
+      transparent: false,
+      blending: THREE.AdditiveBlending
+    });
+    var sprite = new THREE.Sprite( spriteMaterial );
+    sprite.scale.set( earthRadius * 2.5, earthRadius * 2.5, 1.0);
+    sphereCloud.add(sprite);
 
-  window.addEventListener('resize', onWindowResize, false);
-}
+    // Add the skymap.
+    addSkybox();
 
-/**
-* Events to fire upon window resizing.
-*/
-function onWindowResize() {
-  camera.aspect = window.innerWidth / 700;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, 700);
-}
+    window.addEventListener('resize', onWindowResize, false);
+  }
 
-/**
-* Updates to apply to the scene while running.
-*/
-function update() {
-  camera.updateProjectionMatrix();
-  worldRotationPoint.rotation.y = degrees * Math.PI/180;
-  sphereCloud.rotation.y += 0.00015;
-  baseRotationPoint.rotation.y -= 0.00025;
-}
+  /**
+  * Events to fire upon window resizing.
+  */
+  function onWindowResize() {
+    camera.aspect = window.innerWidth / 700;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, 700);
+  }
 
-/**
-* Render the scene.
-*/
-function render() {
-  renderer.render(scene, camera);
-}
+  /**
+  * Updates to apply to the scene while running.
+  */
+  function update() {
+    camera.updateProjectionMatrix();
+    worldRotationPoint.rotation.y = degrees * Math.PI/180;
+    sphereCloud.rotation.y += 0.00015;
+    baseRotationPoint.rotation.y -= 0.00025;
+  }
 
-/**
-* Animate the scene.
-*/
-function animate() {
-  requestAnimationFrame(animate);
-  if (window.innerWidth >= 768) update();
-  render();
-}
+  /**
+  * Render the scene.
+  */
+  function render() {
+    renderer.render(scene, camera);
+  }
 
-function addSkybox() {
-  var urlPrefix = 'img/';
-  var urls = [
-    urlPrefix + 'skybox.jpg',
-    urlPrefix + 'skybox.jpg',
-    urlPrefix + 'skybox.jpg',
-    urlPrefix + 'skybox.jpg',
-    urlPrefix + 'skybox.jpg',
-    urlPrefix + 'skybox.jpg'
-  ];
+  /**
+  * Animate the scene.
+  */
+  function animate() {
+    requestAnimationFrame(animate);
+    if (window.innerWidth >= 768) update();
+    render();
+  }
 
-  var loader = new THREE.CubeTextureLoader();
-  loader.setCrossOrigin( 'https://s.codepen.io' );
+  function addSkybox() {
+    var urlPrefix = 'img/';
+    var urls = [
+      urlPrefix + 'skybox.jpg',
+      urlPrefix + 'skybox.jpg',
+      urlPrefix + 'skybox.jpg',
+      urlPrefix + 'skybox.jpg',
+      urlPrefix + 'skybox.jpg',
+      urlPrefix + 'skybox.jpg'
+    ];
 
-  var textureCube = loader.load( urls );
-  textureCube.format = THREE.RGBAFormat;
+    var loader = new THREE.CubeTextureLoader();
+    loader.setCrossOrigin( 'https://s.codepen.io' );
 
-  var shader = THREE.ShaderLib[ "cube" ];
-  shader.uniforms[ "tCube" ].value = textureCube;
+    var textureCube = loader.load( urls );
+    textureCube.format = THREE.RGBAFormat;
 
-  var material = new THREE.ShaderMaterial( {
-    fragmentShader: shader.fragmentShader,
-    vertexShader: shader.vertexShader,
-    uniforms: shader.uniforms,
-    depthWrite: false,
-    side: THREE.BackSide
-  } );
+    var shader = THREE.ShaderLib[ "cube" ];
+    shader.uniforms[ "tCube" ].value = textureCube;
 
-  var geometry = new THREE.BoxGeometry( 2000, 2000, 2000 );
+    var material = new THREE.ShaderMaterial( {
+      fragmentShader: shader.fragmentShader,
+      vertexShader: shader.vertexShader,
+      uniforms: shader.uniforms,
+      depthWrite: false,
+      side: THREE.BackSide
+    } );
 
-  var skybox = new THREE.Mesh( geometry, material );
+    var geometry = new THREE.BoxGeometry( 2000, 2000, 2000 );
 
-  scene.add( skybox );
-}
+    var skybox = new THREE.Mesh( geometry, material );
+
+    scene.add( skybox );
+  }
+})
