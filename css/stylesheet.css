@@ -263,7 +263,7 @@ i.md-icon {
 }
 
 .footer-page::before {
-    background-color: rgba(29, 29, 27, 0.2);
+    background-color: rgba(29, 29, 27, 0.6);
     position: absolute;
     top: 0;
     left: 0;
@@ -335,8 +335,7 @@ i.md-icon {
 }
 
 .capt-img p {
-    background-color: black;
-    opacity: 55%;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 5%;
 }
 
