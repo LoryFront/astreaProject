@@ -122,7 +122,7 @@ function init() {
   );
   rotationPoint.add( camera );
 
-  let AA = window.innerWidth > 576
+  let AA = window.innerWidth >= 768
 
   // Build the renderer.
   renderer = new THREE.WebGLRenderer({antialias: AA, powerPreference: 'high-performance'});
@@ -259,7 +259,7 @@ function render() {
 */
 function animate() {
   requestAnimationFrame(animate);
-  if (window.innerWidth > 576) update();
+  if (window.innerWidth >= 768) update();
   render();
 }
 
