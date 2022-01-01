@@ -3,7 +3,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
 
 /* Variables section */
-
 :root {
     --galaxy-color: #463c8b;
     --orange-color: #FF7D00;
@@ -16,7 +15,6 @@
 }
 
 /* section general property color */
-
 .text-galaxy {
     color: var(--galaxy-color);
 }
@@ -26,7 +24,6 @@
 }
 
 /* General text elements */
-
 body {
     font-family: 'Satoshi-Regular';
     font-size: 16px;
@@ -669,6 +666,12 @@ a.active .community_card .community_card-img {
     .nav-community {
         overflow-x: auto;
         flex-wrap: nowrap;
+        scrollbar-width: none; /* hide scrollbar for Firefox */
+    }
+
+    /* hide scrollbar for Chromium browser */
+    .nav-community::-webkit-scrollbar {
+        display: none;
     }
 }
 
