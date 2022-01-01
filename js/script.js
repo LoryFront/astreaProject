@@ -91,10 +91,6 @@ function openSuccessModal(e){
 $("#form-booking").submit(openSuccessModal);
 $("#form-joinCommunity").submit(openSuccessModal);
 
-
-
-
-
 const test = document.getElementById('test')
 window.addEventListener('resize', function() {
     if(test) {

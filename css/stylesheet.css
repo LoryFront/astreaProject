@@ -1,5 +1,4 @@
 /* import section */
-
 @import url('font-style.css');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
 
@@ -26,7 +25,6 @@
     color: var(--orange-color);
 }
 
-
 /* General text elements */
 
 body {
@@ -35,6 +33,40 @@ body {
     line-height: 150%;
     color: var(--white-color);
     background-color: var(--bg-page-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Satoshi-Bold';
+}
+
+h1 {
+    font-size: 64px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+h5 {
+    font-family: 'Satoshi-Medium';
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+strong {
+    font-family: 'Satoshi-Bold';
 }
 
 /* buttons style */
@@ -72,42 +104,7 @@ body {
     color: var(--orange-color);
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Satoshi-Bold';
-}
-
-h1 {
-    font-size: 64px;
-    letter-spacing: -2px;
-}
-
-h2 {
-    font-size: 40px;
-    letter-spacing: -1px;
-}
-
-h3 {
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: 150%;
-}
-
-h5 {
-    font-family: 'Satoshi-Medium';
-    font-size: 32px;
-    line-height: 150%;
-}
-
-.text-small {
-    font-size: 12px;
-}
-
-strong {
-    font-family: 'Satoshi-Bold';
-}
-
+/* navbar style */
 .navbar li {
     font-family: 'Satoshi-Medium';
     font-size: 16px;
@@ -149,6 +146,7 @@ strong {
     border-color: rgba(0, 0, 0, 0);
 }
 
+/* header element with image, title and description */
 .bg-headpage {
     background: url('../img/astronomy.jpg') no-repeat;
     -webkit-background-size: cover;
@@ -209,7 +207,7 @@ strong {
     background-image: url('../img/astreafest-background.jpg');
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item + .breadcrumb-item::before {
     content: '>';
     color: var(--white-color);
 }
@@ -249,7 +247,6 @@ i.md-icon {
     font-size: 32px;
 }
 
-
 /* footer style */
 
 .footer-page {
@@ -272,10 +269,7 @@ i.md-icon {
     content: '';
 }
 
-
-/*
-    Component card origins and observatory
-*/
+/* Component card origins and observatory */
 
 .nav-pills .nav-link {
     color: var(--white-color);
@@ -287,7 +281,6 @@ i.md-icon {
     color: var(--orange-color);
 }
 
-
 /*
     Card_left_origins_observatory_head is made of head, a line below the head, paragraphs, and an svg/img on the right;
     Card_right_origins_observatory_head is made of head, a line below the head, paragraphs, and an svg/img on the right.
@@ -297,16 +290,22 @@ i.md-icon {
 .card_right_origins_observatory_head {
     border-bottom: 2px solid var(--white-color);
 }
-
-.card_left_origins_observatory_head::before {
+.card_left_origins_observatory_head::before, .card_right_origins_observatory_head::before,
+.card-astreafest::before {
     position: absolute;
-    right: 0;
-    bottom: -4px;
     content: '';
     width: 6px;
     height: 6px;
     background-color: var(--white-color);
     transform: rotate(45deg);
+}
+.card_left_origins_observatory_head::before {
+    right: 0;
+    bottom: -4px;
+}
+.card_right_origins_observatory_head::before, .card-astreafest::before {
+    left: 0;
+    bottom: -4px;
 }
 
 .card_origins_observatory_img {
@@ -323,43 +322,20 @@ i.md-icon {
     clip-path: polygon(30% 0, 100% 0, 100% 79%, 76% 100%, 0 100%, 0 24%);
 }
 
-.card_right_origins_observatory_head::before {
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--white-color);
-    transform: rotate(45deg);
-}
-
+/* style for caption in carousel of origin */
 .capt-img p {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 5%;
 }
 
-
-/*
-    Card_environment is made of an img (triangle and squared shapes), title, paragraph
-*/
-
-.card_environment_img {
+/* Card_environment is made of an img (triangle and squared shapes), title, paragraph */
+/* environment and service card */
+.card_environment_img, .card-intro {
     width: 100%;
     height: 100%;
 }
 
-.card_environment_head {
-    text-align: center;
-}
-
-.card_environment_head h4 {
-    color: var(--orange-color) !important;
-}
-
-
 /* HOME */
-
 
 /* card for elements of list in home */
 
@@ -414,13 +390,7 @@ i.md-icon {
     bottom: 0;
 }
 
-
 /* services section */
-
-.card-intro {
-    width: 100%;
-    height: 100%;
-}
 
 .service_title {
     position: absolute;
@@ -440,7 +410,6 @@ i.md-icon {
     color: var(--orange-color);
 }
 
-
 /* observatory-tourism section */
 
 .obs-tourism_card-event {
@@ -451,28 +420,6 @@ i.md-icon {
     margin-left: 0;
     z-index: 0;
 }
-
-
-/* Problematica
-.card-event_description img {
-  height: 100%;
-  max-height: 280px;
-} */
-
-
-/* astreafest section */
-
-.card-astreafest::before {
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--white-color);
-    transform: rotate(45deg);
-}
-
 
 /* community section */
 
@@ -512,7 +459,6 @@ a.active .community_card .community_card-img {
     border: 2px solid var(--orange-color);
 }
 
-
 /* modals section */
 
 .modal_tourism {
@@ -520,10 +466,7 @@ a.active .community_card .community_card-img {
     color: var(--white-color);
 }
 
-
-/**
- * COME RAGGIUNGERCI
- */
+/* COME RAGGIUNGERCI */
 
 #earth {
     position: absolute;
@@ -563,7 +506,6 @@ a.active .community_card .community_card-img {
 	height: 100%;
 	border-radius: 100%;
 	border-bottom: 0 solid rgba(255, 255, 255, 0.02);
-
 	box-shadow:
 		0 -10px 20px 20px #ffffff40 inset,
 		0 -5px 15px 10px #ffffff50 inset,
@@ -595,12 +537,7 @@ a.active .community_card .community_card-img {
 	}
 }
 
-
-
-
-/**
- * Vertical line
- */
+/* Vertical line of reach us */
 
 .v-line-reachus {
     position: absolute;
@@ -613,18 +550,14 @@ a.active .community_card .community_card-img {
 }
 
 
-/**
-   * Card title fix width
-   */
+/* Card title fix width of reach us */
 
 .card-reachus h2 {
     max-width: 80%;
 }
 
 
-/**
- * Dot step to reach us
- */
+/* Dot step to reach us */
 
 .card-reachus::before {
     content: '';
@@ -667,10 +600,7 @@ a.active .community_card .community_card-img {
     z-index: -1;
 }
 
-
-/**
- * ASTREAFEST
- */
+/* ASTREAFEST */
 
 .nav-wrapper-astreafest.fixed {
     position: fixed;
@@ -701,33 +631,23 @@ a.active .community_card .community_card-img {
     z-index: -1;
 }
 
+/* RESPONSIVE SECTION */
 
 /* Desktop style */
-
 @media only screen and (min-width: 992px) {
+    /* vertical element with dot series on left of the page */
     .bg-dotted {
         background-image: url('../img/bg.svg');
         background-repeat: repeat-y;
         background-size: 3%;
         background-position: 4rem 0;
     }
-    /*.indentation-left {
-    padding-left: 9rem;
-  }
-
-  .indentation-right {
-    padding-right: 9rem;
-  }*/
-    /**
-   * Vertical line
-   */
+    /* Vertical line reach us */
     .v-line-reachus {
         margin: 0 auto;
         height: 120%;
     }
-    /**
-   * Card title fix width
-   */
+    /* Card title fix width reach us */
     .card-reachus:first-child h2,
     .card-reachus:nth-child(3) h2 {
         max-width: 80%;
@@ -743,6 +663,7 @@ a.active .community_card .community_card-img {
     }
 }
 
+/* breakpoint to set orizzontal scroll of tabs in community page */
 @media screen and (max-width: 1199px) {
     .nav-community {
         overflow-x: auto;
@@ -750,10 +671,13 @@ a.active .community_card .community_card-img {
     }
 }
 
+/* mobile style */
 @media screen and (max-width: 991px) {
+    /* text style */
     h3 {
         font-size: 26px;
     }
+    /* mobile burger menu collapse */
     .navbar-collapse {
         position: fixed;
         left: -1200px;
@@ -790,6 +714,7 @@ a.active .community_card .community_card-img {
     .navbar li.active::after {
         content: none;
     }
+    /* cards in home with triangle */
     .home-card-triangle {
         flex-direction: column;
         justify-content: center;
@@ -803,14 +728,12 @@ a.active .community_card .community_card-img {
     .home-card-triangle.card-triangle_right {
         flex-direction: column-reverse;
     }
+    /* footer section */
     .footer-page {
         padding-top: 45px;
     }
     .footer_bottom-el {
         flex-direction: column-reverse;
-    }
-    .footer_bottom-el .justify-content-end {
-        justify-content: center !important;
     }
     .footer-page .footer_btn-subscribe {
         text-align: center;
@@ -818,9 +741,11 @@ a.active .community_card .community_card-img {
     #footer-description {
         display: none;
     }
+    /* mobile carousel for community in home page */
     #home_carouselCommunity .carousel-item {
         min-height: 200px;
     }
+    /* card with triangle in home and observatory-tourism pages */
     .card-triangle_element,
     .obs-tourism_card-event {
         margin-left: 0;
@@ -842,12 +767,7 @@ a.active .community_card .community_card-img {
     .card-triangle_description {
         margin: 5rem 0;
     }
-    /* Problematica
-  .card-event_description {
-    margin-top: 2rem;
-    margin-left: 0;
-    margin-right: 0;
-  } */
+    /* astreafest banner in home page */
     .home-astreafest img {
         width: auto;
         max-height: 550px;
@@ -890,12 +810,14 @@ a.active .community_card .community_card-img {
     }
 }
 
+/* media query to set correctly element with dot left */
 @media only screen and (max-width: 1350px) {
     .bg-dotted {
         background-position-x: left;
     }
 }
 
+/* media query for mobile setting of menu with data in astreafest page */
 @media only screen and (max-width: 575px) {
     .nav-wrapper-astreafest.fixed .nav-pills {
         padding: 0 15px;
