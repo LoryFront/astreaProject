@@ -1,8 +1,10 @@
 /* import section */
+
 @import url('font-style.css');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
 
 /* Variables section */
+
 :root {
     --galaxy-color: #463c8b;
     --orange-color: #FF7D00;
@@ -14,7 +16,9 @@
     --black-color: #000000;
 }
 
+
 /* section general property color */
+
 .text-galaxy {
     color: var(--galaxy-color);
 }
@@ -23,7 +27,9 @@
     color: var(--orange-color);
 }
 
+
 /* General text elements */
+
 body {
     font-family: 'Satoshi-Regular';
     font-size: 16px;
@@ -32,7 +38,9 @@ body {
     background-color: var(--bg-page-color);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Satoshi-Bold';
 }
 
@@ -65,6 +73,7 @@ h5 {
 strong {
     font-family: 'Satoshi-Bold';
 }
+
 
 /* buttons style */
 
@@ -101,7 +110,9 @@ strong {
     color: var(--orange-color);
 }
 
+
 /* navbar style */
+
 .navbar li {
     font-family: 'Satoshi-Medium';
     font-size: 16px;
@@ -143,7 +154,9 @@ strong {
     border-color: rgba(0, 0, 0, 0);
 }
 
+
 /* header element with image, title and description */
+
 .bg-headpage {
     background: url('../img/astronomy.jpg') no-repeat;
     -webkit-background-size: cover;
@@ -204,7 +217,7 @@ strong {
     background-image: url('../img/astreafest-background.jpg');
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     content: '>';
     color: var(--white-color);
 }
@@ -244,6 +257,7 @@ i.md-icon {
     font-size: 32px;
 }
 
+
 /* footer style */
 
 .footer-page {
@@ -256,15 +270,22 @@ i.md-icon {
     padding-top: 100px;
 }
 
-.footer-page::before {
-    background-color: rgba(29, 29, 27, 0.2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    content: '';
+.footer-page {
+    background: url(../img/footer_img.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 500px;
+    padding-top: 100px;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, .2);
 }
+
+a:hover .bi {
+    color: var(--dark-galaxy-color);
+}
+
 
 /* Component card origins and observatory */
 
@@ -278,6 +299,7 @@ i.md-icon {
     color: var(--orange-color);
 }
 
+
 /*
     Card_left_origins_observatory_head is made of head, a line below the head, paragraphs, and an svg/img on the right;
     Card_right_origins_observatory_head is made of head, a line below the head, paragraphs, and an svg/img on the right.
@@ -287,7 +309,9 @@ i.md-icon {
 .card_right_origins_observatory_head {
     border-bottom: 2px solid var(--white-color);
 }
-.card_left_origins_observatory_head::before, .card_right_origins_observatory_head::before,
+
+.card_left_origins_observatory_head::before,
+.card_right_origins_observatory_head::before,
 .card-astreafest::before {
     position: absolute;
     content: '';
@@ -296,11 +320,14 @@ i.md-icon {
     background-color: var(--white-color);
     transform: rotate(45deg);
 }
+
 .card_left_origins_observatory_head::before {
     right: 0;
     bottom: -4px;
 }
-.card_right_origins_observatory_head::before, .card-astreafest::before {
+
+.card_right_origins_observatory_head::before,
+.card-astreafest::before {
     left: 0;
     bottom: -4px;
 }
@@ -319,20 +346,29 @@ i.md-icon {
     clip-path: polygon(30% 0, 100% 0, 100% 79%, 76% 100%, 0 100%, 0 24%);
 }
 
+
 /* style for caption in carousel of origin */
+
 .capt-img p {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 5%;
 }
 
+
 /* Card_environment is made of an img (triangle and squared shapes), title, paragraph */
+
+
 /* environment and service card */
-.card_environment_img, .card-intro {
+
+.card_environment_img,
+.card-intro {
     width: 100%;
     height: 100%;
 }
 
+
 /* HOME */
+
 
 /* card for elements of list in home */
 
@@ -388,6 +424,7 @@ i.md-icon {
     bottom: 0;
 }
 
+
 /* services section */
 
 .service_title {
@@ -408,6 +445,7 @@ i.md-icon {
     color: var(--orange-color);
 }
 
+
 /* observatory-tourism section */
 
 .obs-tourism_card-event {
@@ -418,6 +456,7 @@ i.md-icon {
     margin-left: 0;
     z-index: 0;
 }
+
 
 /* community section */
 
@@ -457,6 +496,7 @@ a.active .community_card .community_card-img {
     border: 2px solid var(--orange-color);
 }
 
+
 /* modals section */
 
 .modal_tourism {
@@ -464,7 +504,8 @@ a.active .community_card .community_card-img {
     color: var(--white-color);
 }
 
-/* COME RAGGIUNGERCI */
+
+/* How to reach us */
 
 #earth {
     position: absolute;
@@ -491,31 +532,22 @@ a.active .community_card .community_card-img {
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    background: linear-gradient(165deg, rgba(255,255,255,1) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 1) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
     position: relative;
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 
 #loader::after {
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 100%;
-	border-radius: 100%;
-	border-bottom: 0 solid rgba(255, 255, 255, 0.02);
-	box-shadow:
-		0 -10px 20px 20px #ffffff40 inset,
-		0 -5px 15px 10px #ffffff50 inset,
-		0 -2px 5px #ffffff80 inset,
-		0 -3px 2px #ffffffbb inset,
-		0 2px 0px #ffffff,
-		0 2px 3px #ffffff,
-		0 5px 5px #ffffff90,
-		0 10px 15px #ffffff60,
-		0 10px 20px 20px #ffffff40;
-	filter: blur(3px);
-	animation: 2s rotate linear infinite;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border-bottom: 0 solid rgba(255, 255, 255, 0.02);
+    box-shadow: 0 -10px 20px 20px #ffffff40 inset, 0 -5px 15px 10px #ffffff50 inset, 0 -2px 5px #ffffff80 inset, 0 -3px 2px #ffffffbb inset, 0 2px 0px #ffffff, 0 2px 3px #ffffff, 0 5px 5px #ffffff90, 0 10px 15px #ffffff60, 0 10px 20px 20px #ffffff40;
+    filter: blur(3px);
+    animation: 2s rotate linear infinite;
 }
 
 #earth.slide-down {
@@ -523,6 +555,7 @@ a.active .community_card .community_card-img {
     transition: 3s cubic-bezier(0.550, 0.085, 0.680, 0.530);
     transition-delay: .8s;
 }
+
 #loader.slide-up {
     transform: translateY(-100%) scale(0);
     opacity: 0;
@@ -530,10 +563,11 @@ a.active .community_card .community_card-img {
 }
 
 @keyframes rotate {
-	100% {
-		transform: rotate(360deg)
-	}
+    100% {
+        transform: rotate(360deg)
+    }
 }
+
 
 /* Vertical line of reach us */
 
@@ -598,6 +632,7 @@ a.active .community_card .community_card-img {
     z-index: -1;
 }
 
+
 /* ASTREAFEST */
 
 .nav-wrapper-astreafest.fixed {
@@ -629,9 +664,12 @@ a.active .community_card .community_card-img {
     z-index: -1;
 }
 
+
 /* RESPONSIVE SECTION */
 
+
 /* Desktop style */
+
 @media only screen and (min-width: 992px) {
     /* vertical element with dot series on left of the page */
     .bg-dotted {
@@ -661,21 +699,25 @@ a.active .community_card .community_card-img {
     }
 }
 
+
 /* breakpoint to set orizzontal scroll of tabs in community page */
+
 @media screen and (max-width: 1199px) {
     .nav-community {
         overflow-x: auto;
         flex-wrap: nowrap;
-        scrollbar-width: none; /* hide scrollbar for Firefox */
+        scrollbar-width: none;
+        /* hide scrollbar for Firefox */
     }
-
     /* hide scrollbar for Chromium browser */
     .nav-community::-webkit-scrollbar {
         display: none;
     }
 }
 
+
 /* mobile style */
+
 @media screen and (max-width: 991px) {
     /* text style */
     h3 {
@@ -803,14 +845,18 @@ a.active .community_card .community_card-img {
     }
 }
 
+
 /* media query to set correctly element with dot left */
+
 @media only screen and (max-width: 1350px) {
     .bg-dotted {
         background-position-x: left;
     }
 }
 
+
 /* media query to set astreafest banner in home page */
+
 @media only screen and (max-width: 768px) {
     .home-astreafest img {
         object-fit: cover;
@@ -825,7 +871,9 @@ a.active .community_card .community_card-img {
     }
 }
 
+
 /* media query for mobile setting of menu with data in astreafest page */
+
 @media only screen and (max-width: 575px) {
     .nav-wrapper-astreafest.fixed .nav-pills {
         padding: 0 15px;
