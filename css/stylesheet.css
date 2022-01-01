@@ -381,6 +381,7 @@ i.md-icon {
 
 .home-astreafest img {
     width: 100%;
+    min-height: 250px;
     max-height: 300px;
     object-fit: cover;
 }
@@ -767,17 +768,6 @@ a.active .community_card .community_card-img {
     .card-triangle_description {
         margin: 5rem 0;
     }
-    /* astreafest banner in home page */
-    .home-astreafest img {
-        width: auto;
-        max-height: 550px;
-    }
-    .home-astreafest_description {
-        left: 0;
-        top: auto;
-        bottom: 0;
-        margin-bottom: 3rem;
-    }
     a:hover .community_card,
     a.active .community_card {
         transform: scale(1);
@@ -814,6 +804,21 @@ a.active .community_card .community_card-img {
 @media only screen and (max-width: 1350px) {
     .bg-dotted {
         background-position-x: left;
+    }
+}
+
+/* media query to set astreafest banner in home page */
+@media only screen and (max-width: 768px) {
+    .home-astreafest img {
+        object-fit: cover;
+        max-height: 550px;
+    }
+    .home-astreafest_description {
+        left: 0;
+        top: auto;
+        bottom: 0;
+        padding: 3rem 0;
+        background-color: rgba(70, 59, 138, .6);
     }
 }
 
