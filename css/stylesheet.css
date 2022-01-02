@@ -156,7 +156,7 @@ strong {
 /* header element with image, title and description */
 
 .bg-headpage {
-    background: url('../img/astronomy.jpg') no-repeat; /*TODO:l'immagine non esiste*/
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
