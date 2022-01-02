@@ -46,8 +46,6 @@ function accordionOpen() {
 $(document).ready(function() {
     const page = window.location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 
-    console.log(page)
-
     if(page !== '4-free_page.html') return
     window.onscroll = function() {
         if (window.pageYOffset >= 548 - 66) {
