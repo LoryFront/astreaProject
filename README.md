@@ -1,13 +1,10 @@
 # astreaProject
 Progetto del corso di Comunicazione visiva e design delle interfacce
 
-### ToDo
-
-- [ ] Inserire favicon
-- [ ] Testare pagine con [HTML Validator](https://validator.w3.org/nu/):
-  - [ ] Home
-  - [ ] Origini
-  - [ ] Servizi (e sottopagine)
-  - [x] Come Raggiungerci
-  - [x] Astreafest
-  - [ ] Community
+# gruppo di lavoro
+Ivana Cassaniti (873128), 
+Elena Castellani (868076), 
+Nada Cenci (865484), 
+Loredana Frontino (866778),
+Elia Guarnieri (868700), 
+Sophia Viganò (791388)
