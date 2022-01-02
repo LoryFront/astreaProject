@@ -872,4 +872,7 @@ a.active .community_card .community_card-img {
     .nav-wrapper-astreafest.fixed .nav-pills {
         padding: 0 15px;
     }
+    .no-pad-mobile {
+        padding: 0;
+    }
 }
